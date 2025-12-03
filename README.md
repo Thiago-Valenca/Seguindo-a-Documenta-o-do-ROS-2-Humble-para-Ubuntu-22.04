@@ -177,6 +177,10 @@ Para ver o setup atual do ROS2:
 ````
 printenv | grep -i ROS
 ````
+Dentro de ros2_ws/src/:
+````
+git clone https://github.com/ros/ros_tutorials.git -b humble
+````
 ## Ardupilot Workspace
 ````
 mkdir -p ~/ardu_ws/src

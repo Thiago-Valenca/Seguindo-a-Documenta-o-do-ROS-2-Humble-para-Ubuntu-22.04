@@ -39,7 +39,98 @@ source /opt/ros/humble/setup.bash
 ````
 Exemplo do Talker-Listener
 ````
-
+source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_cpp talker
+````
+Em outro terminal:
+````
+source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_py listener
+````
+Em outro terminal
+````
+sudo apt update && sudo apt install -y \
+  python3-flake8-docstrings \
+  python3-pip \
+  python3-pytest-cov \
+  ros-dev-tools
+````
+````
+sudo apt install -y \
+   python3-flake8-blind-except \
+   python3-flake8-builtins \
+   python3-flake8-class-newline \
+   python3-flake8-comprehensions \
+   python3-flake8-deprecated \
+   python3-flake8-import-order \
+   python3-flake8-quotes \
+   python3-pytest-repeat \
+   python3-pytest-rerunfailures
+````
+````
+mkdir -p ~/ros2_humble/src
+cd ~/ros2_humble
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/humble/ros2.repos src
+````
+````
+sudo apt upgrade
+````
+````
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers"
+````
+````
+Em outro terminal:
+````
+cd ~/ros2_humble/
+colcon build --symlink-install
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
+````
 ````
 ````
 ````

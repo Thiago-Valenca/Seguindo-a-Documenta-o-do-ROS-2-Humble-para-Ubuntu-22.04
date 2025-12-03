@@ -131,8 +131,12 @@ git push origin HEAD:ardupilot_git_tutorial
 git submodule update --recursive
 git submodule init
 ````
+## Configurando o Build Environment
 ````
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
 ````
+Agora dê um logout e login no computador
 ````
 ````
 ````

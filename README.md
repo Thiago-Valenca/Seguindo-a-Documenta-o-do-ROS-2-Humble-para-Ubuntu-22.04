@@ -138,9 +138,16 @@ Tools/environment_install/install-prereqs-ubuntu.sh -y
 ````
 Agora dê um logout e login no computador
 ````
+cd ardupilot
+./waf configure
+./waf build
 ````
+Para rodar uma simulação:
 ````
+cd ArduCopter
+sim_vehicle.py --console --map -w
 ````
+Para sair da simulação: CTRL+C
 ````
 ````
 ````

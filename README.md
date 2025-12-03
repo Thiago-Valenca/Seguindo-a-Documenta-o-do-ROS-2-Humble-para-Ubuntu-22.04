@@ -119,11 +119,17 @@ git status
 ````
 Você poderá ver o arquivo modificado
 ````
-
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 ````
 ````
+git add Tools/GIT_Test/GIT_Success.txt
+git commit -m 'Tools: added name to GIT_Success.txt'
+git push origin HEAD:ardupilot_git_tutorial
 ````
 ````
+git submodule update --recursive
+git submodule init
 ````
 ````
 ````

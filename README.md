@@ -181,11 +181,24 @@ printenv | grep -i ROS
 ````
 mkdir -p ~/ardu_ws/src
 pip install --upgrade setuptools[core]
+pip install --upgrade build
 vcs import --recursive --input  https://raw.githubusercontent.com/ArduPilot/ardupilot/master/Tools/ros2/ros2.repos src
 ````
 ````
+cd ~/ardu_ws
+sudo apt update
+rosdep update
+source /opt/ros/humble/setup.bash
+rosdep install --from-paths src --ignore-src -r -y
 ````
+Em outro terminal:
 ````
+sudo apt install default-jre
+cd ~/ardu_ws
+git clone --recurse-submodules https://github.com/ardupilot/Micro-XRCE-DDS-Gen.git
+cd Micro-XRCE-DDS-Gen
+./gradlew assemble
+echo "export PATH=\$PATH:$PWD/scripts" >> ~/.bashrc
 ````
 ````
 ````

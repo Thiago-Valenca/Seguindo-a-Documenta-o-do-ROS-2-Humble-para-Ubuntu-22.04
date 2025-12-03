@@ -83,14 +83,22 @@ rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext
 ````
 Em outro terminal:
 ````
+sudo apt install libacl1-dev -y
+sudo apt install libasio-dev
+````
+````
 cd ~/ros2_humble/
 colcon build --symlink-install
 ````
+Agora, podemos rodar o exemplo talker-listener. Em outro terminal:
 ````
+. ~/ros2_humble/install/local_setup.bash
+ros2 run demo_nodes_cpp talker
 ````
+Em outro terminal
 ````
-````
-````
+. ~/ros2_humble/install/local_setup.bash
+ros2 run demo_nodes_py listener
 ````
 ````
 ````

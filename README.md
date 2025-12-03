@@ -180,6 +180,8 @@ printenv | grep -i ROS
 Dentro de ros2_ws/src/:
 ````
 git clone https://github.com/ros/ros_tutorials.git -b humble
+cd ..
+rosdep install -i --from-path src --rosdistro humble -y
 ````
 ## Ardupilot Workspace
 ````
